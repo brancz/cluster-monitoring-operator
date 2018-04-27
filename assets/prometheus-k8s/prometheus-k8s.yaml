@@ -29,13 +29,6 @@ spec:
   secrets:
   - prometheus-k8s-tls
   - prometheus-k8s-proxy
-  resources:
-    limits:
-      cpu: 400m
-      memory: 2000Mi
-    requests:
-      cpu: 100m
-      memory: 500Mi
   listenLocal: true
   containers:
   - name: prometheus-proxy
