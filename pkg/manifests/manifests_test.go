@@ -742,11 +742,15 @@ ingress:
 	})
 
 	f := NewFactory("openshift-monitoring", "openshift-user-workload-monitoring", c)
+<<<<<<< HEAD
 	p, err := f.PrometheusK8s(
 		"prometheus-k8s.openshift-monitoring.svc",
 		&v1.Secret{ObjectMeta: metav1.ObjectMeta{Name: "foo"}},
 		&v1.ConfigMap{ObjectMeta: metav1.ObjectMeta{Name: "foo"}},
 	)
+=======
+	p, err := f.PrometheusK8s("prometheus-k8s.openshift-monitoring.svc", &v1.Secret{ObjectMeta: metav1.ObjectMeta{Name: "foo"}}, nil)
+>>>>>>> *: Move sending telemetry to Prometheus native functionality
 	if err != nil {
 		t.Fatal(err)
 	}
